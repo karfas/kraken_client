@@ -43,3 +43,9 @@ VCR.use_cassette("spread") do
   spread = client.spread(pair: 'XXBTZEUR')
   Spectus.this { spread.XXBTZEUR.class }.MUST Equal: Array
 end
+
+# OHLC
+VCR.use_cassette("ohlc") do
+  ohlc = client.spread(pair: 'XXBTZEUR')
+  Spectus.this { ohlc.XXBTZEUR.class }.MUST Equal: Array
+end
